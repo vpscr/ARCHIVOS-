@@ -85,7 +85,7 @@ canbio_color () {
 clear
 msg -bar2
 msg -tit
-msg -ama "     CONTROLADOR DE COLORES DEL SCRIP VPS-MX"
+msg -ama "     CONTROLADOR DE COLORES DEL SCRIP ALAN TECK PERU"
 msg -bar2
 msg -ama "$(fun_trans "Selecione 7 cores"): "
 echo -e '\033[1;37m [1] ###\033[0m'
@@ -179,7 +179,7 @@ clear
 clear
 msg -bar
 msg -tit
-echo -e "\033[1;91m      ACTULIZAR FICHEROS DEL SCRIPT VPS-MX"
+echo -e "\033[1;91m      ACTULIZAR FICHEROS DEL SCRIP ALAN TECK PERU"
 msg -bar2 && msg -ne "\033[1;93m          >>> INTRODUSCA LA KEY ABAJO <<<\n   \033[1;37m" && read Key
 tput cuu1 && tput dl1
 done
@@ -198,7 +198,7 @@ updatedb
 
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "Code de KEY Invalido!") ]]; then
    msg -bar2
-   msg -verd "    $(source trans -b es:es "Ficheros Copiados"|sed -e 's/[^a-z -]//ig'): \e[97m[\e[93mVPS-MX #MOD by @Kalix1\e[97m]"
+   msg -verd "    $(source trans -b es:es "Ficheros Copiados"|sed -e 's/[^a-z -]//ig'): \e[97m[\e[93mALAN TECK PERU\e[97m]"
    REQUEST=$(ofus "$Key"|cut -d'/' -f2)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    pontos="." 
@@ -215,14 +215,14 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "Code de KEY Inva
    cat /etc/bash.bashrc|grep -v '[[ $UID != 0 ]] && TMOUT=15 && export TMOUT' > /etc/bash.bashrc.2
    echo -e '[[ $UID != 0 ]] && TMOUT=15 && export TMOUT' >> /etc/bash.bashrc.2
    mv -f /etc/bash.bashrc.2 /etc/bash.bashrc
-   echo "${SCPdir}/menu" > /usr/bin/vps-mx && chmod +x /usr/bin/vps-mx
-   echo "${SCPdir}/menu" > /usr/bin/VPS-MX && chmod +x /usr/bin/VPS-MX
+   echo "${SCPdir}/menu" > /usr/bin/peru && chmod +x /usr/bin/peru
+   echo "${SCPdir}/menu" > /usr/bin/alan && chmod +x /usr/bin/alan
    echo "$Key" > ${SCPdir}/key.txt
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "es" > ${SCPidioma} || echo "es" > ${SCPidioma}
    echo -e "${cor[2]}               ACTULIZACION COMPLETA "
    echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-   echo -e "  \033[1;41m               sudo VPS-MX o vps-mx             \033[0;37m" && msg -bar2
+   echo -e "  \033[1;41m               sudo alan o peru             \033[0;37m" && msg -bar2
 
 else
 invalid_key
